@@ -56,4 +56,12 @@ await server.listen()
 server.printUrls()
 ```
 
-差不多就是这样了，剩下的就得看看 createServer 启动的服务是个什么东西了。
+之后就走到了创建Server的流程
+createServer分别作了这几件事
+1. 解析用户/默认配置
+2. 创建网络服务
+ - http ，并在其上注册各种中间件
+ - ws
+3. 利用网络服务，做文件监控(此处和HMR相关)
+4. 创建插件容器 pluginContainer ，处理Plugin Hook
+
