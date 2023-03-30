@@ -34,7 +34,7 @@ const myDirective = {
 
 首先先看看directive的基本结构
 ```typescript
-    const Comp = {
+    const Comp = 
       setup() {
         _instance = currentInstance
       },
